@@ -392,7 +392,7 @@ class ConvPoolBlock(torch.nn.Module):
         out = F.relu(self.conv2(graph, out))
         out = torch.reshape(out,(-1,512))
         graph, out, _ = self.pool(graph, out)
-        g_out = torch.cat([self.maxpool(graph, out), self.maxpool(graph, out)], dim=-1)
+        g_out = torch.cat([self.avgpool(graph, out), self.maxpool(graph, out)], dim=-1)
         return graph, out, g_out 
     
 
