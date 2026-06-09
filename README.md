@@ -16,7 +16,8 @@ This is the code repository for protein function prediction model ProMIAF.
 * The version of CUDA is `cudatoolkit==11.3.1`
 
 ## Data
-Our experimental dataset come from [MSNGO](https://github.com/blingbell/MSNGO/tree/master/data). It covers 13 species and multiple modal data, including protein sequences, PPI networks, 3D structures, and GO annotations. Among them, the protein sequences are from Uniprot, PPI networks are from STRING (v11.0b), and protein structures have been missing-supplemented by AlphaFold2 or ESMFold methods. GO annotations are downloaded from the GOA database, filtered by species and evidence codes. For the biological textual descriptions, we collect them from the [UniProtKB](https://www.uniprot.org/). You can download [here](https://github.com/Candyperfect/ProMIAF/tree/main/data).
+Our experimental datasets are constructed based on the dataset from [MSNGO](https://github.com/blingbell/MSNGO/tree/master/data). It covers 13 species and multiple modal data, including protein sequences, PPI networks and 3D structures. Among them, the protein sequences are from Uniprot (Uniprot Consortium, 2021), PPI networks are from STRING (v11.0b), and protein structures have been missing-supplemented by AlphaFold2 or ESMFold methods. GO annotations are retrieved from the GOA database (Version: 2026-04-30) and subsequently filtered according to the 13 involved species and evidence codes (i.e., EXP, IMP, IGI, IDA, IPI, IEP, HTP, HDA, HMP, HGI, HEP, IBA, IBD, IKR, and IRD). GO is obtained from gene ontology resource (Version: 2026-05-19). Biological textual descriptions are collected from the dataset adopted by [Prot2Text](https://github.com/hadi-abdine/Prot2Text), which corresponds to the UniProtKB version "2022_04" released in October 2022. GO annotations, GO and biological textual descriptions ban be downloaded [here](https://github.com/Candyperfect/ProMIAF/tree/main/data).
+
 
 
 ## Train and Predict
