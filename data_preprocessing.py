@@ -164,15 +164,15 @@ def get_dataset(datapath:str):
         min_date = item['min_date']
         org_id = item['org_id']
         annots = item['annotation']
-        if min_date >= '20220801' and min_date < '20230801':
+        if min_date >= '20250501' and min_date < '20260430':
             for annot, o in annots:
                 data_size_orgs[org_id][o]['test'].add(pid)
                 data_set[o]['test'][pid].add(annot)
-        elif min_date >= '20210101' and min_date < '20220801':
+        elif min_date >= '20240101' and min_date <= '20250430':
             for annot, o in annots:
                 data_size_orgs[org_id][o]['valid'].add(pid)
                 data_set[o]['valid'][pid].add(annot)
-        elif min_date < '20210101':
+        elif min_date < '20240101':
             for annot, o in annots:
                 data_size_orgs[org_id][o]['train'].add(pid)
                 data_set[o]['train'][pid].add(annot)
